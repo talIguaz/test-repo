@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "4.0.0"
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile files("libs/hello-world.jar")
+    provided group: 'io.nuclio', name: 'nuclio-sdk-java', version: '1.0.0'
+}
+
